@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id ="result"></p>
+
+    <script>
+        // 선언부
+        let width, height, result;
+
+        // 구동부
+        width = prompt("너비를 입력하세요.")
+        height = prompt("높이를 입력하세요.")
+
+        // 출력부
+        result = width * height
+        console.log(result)
+        document.getElementById("result").innerHTML =(`넓이는 ${result}입니다.`)
+    </script>
+</body>
+
+</html>
