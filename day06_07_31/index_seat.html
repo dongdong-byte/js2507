@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let rownum;
+        let colnum = parseInt(prompt("한줄에 몇명씩 않아있습니까?"));
+        let seatno;
+        let memnum = parseInt(prompt("입장객 수를 입력하세요"));
+
+
+        for (let i = 0; i < rownum; i++) {
+            for (let j = 1; j <= colnum; j++) {
+                seatno = i * colnum + j;
+                if(seatno >memnum ) break;
+                document.write(`좌석 ${seatno}`)
+            }
+            document.write(`<br>`)
+        }
+
+    </script>
+</body>
+
+</html>

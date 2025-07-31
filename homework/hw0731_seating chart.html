@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        table,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+
+        }
+
+        td {
+            padding: 10px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>자리배치도</h1>
+    <script>
+        let memnum = parseInt(prompt("입장객은 몇명인가요?"))
+        let colnum = parseInt(prompt("한줄에 몇명씩 앉습니까?"))
+
+        // 구현부
+        if (memnum % colnum === 0) {
+            rownum = memnum / colnum
+        } else {
+            rownum = parseInt(memnum / colnum) + 1;
+        }
+        // 출력부
+        // document.write(`모두 ${rownum} 의 줄이 필요합니다.`)
+        document.write(`<table>`);
+        for (let i = 0; i < rownum; i++) {
+            document.write(`<tr>`)
+            for (let j = 1; j <= colnum; j++) {
+                seatno = i * colnum + j;
+                if (seatno > memnum) break;
+                document.write(`<td>좌석 ${seatno}</td>`)
+            }
+            document.write(`</tr>`)
+        }
+        document.write(`</table>`);
+    </script>
+</body>
+
+</html>
